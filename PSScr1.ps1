@@ -35,3 +35,5 @@ foreach($tool in $tools){
 	C:\Windows\System32\cmd.exe /C dir C:\*$tool* /s /b | Out-File "$path\checkFilesOutput\$tool.txt"
 }
 Write-host "Finished searching for tools"
+# Audit policeis
+
