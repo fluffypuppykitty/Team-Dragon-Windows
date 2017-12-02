@@ -11,7 +11,15 @@ $path=Get-Content $path2\path.txt
 Write-host "Searching for unauthorized files..."
 $extensions =@("aac","ac3","avi","aiff","bat","bmp","exe","flac","gif","jpeg","jpg","mov","m3u","m4p",
 "mp2","mp3","mp4","mpeg4","midi","msi","ogg","png","txt","sh","wav","wma","vqf")
-$tools =@("Cain","nmap","keylogger","Armitage","Wireshark","Metasploit","netcat")
+$tools =@("Cain","nmap","keylogger","Armitage","Wireshark","Metasploit","netcat","PWdump7","Fgdump",
+"L0phtCrack","Ophcrack","PasswordsPro","Cain & Abel","Recover Keys","RockXP","Krbpwguess","LCP","LSASecretsView","TinyFTPD","Icmpsend","Advanced Keylogger","Spytech SpyAgent",
+"Perfect Keylogger","Powered Keylogger","Sprix Keylogger","KeyGhost","Keylogger Spy Monitor","REFOG Personal Monitor","Actual Keylogger","Activity Monitor,"SpyMe Tools","Easy Remote","
+"Alchemy Remote","Remote Exec","Execute This!","OsMonitor","Wiretap Pro","Spylab WebSpy","Active@Password Chang","Stellar Phoenix Password Recovery")
+
+
+
+
+
 Write-host "Checking $extensions"
 foreach($ext in $extensions){
 	Write-host "Checking for .$ext files"
