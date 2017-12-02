@@ -46,7 +46,7 @@ echo Lockout Duration: 30 Minutes
 echo Lockout Threshold: 7
 secedit.exe /export /cfg C:\secconfig.cfg
 echo Use this command to update edited file: secedit.exe /configure /db %windir%\securitynew.sdb /cfg C:\secconfig.cfg /areas SECURITYPOLICY
-echo Setting up auditing
+echo Setting up auditing...
 auditpol /set /category:"Audit System Events"/Failure:Success
 auditpol /set /category:"Audit Process Tracking"/Faliure:Success
 auditpol /set /category:"Audit Account Logon Events"/Faliure:Success
@@ -58,4 +58,7 @@ auditpol /set /category:"Audit Policy Change"/Faliure:Successs
 auditpol /set /category:"Audit Privilege Use"/Faliure:Success
 auditpol /set /category:"Audit Process Tracking"/Faliure:Success
 auditpol /set /cateory:"Audit System Events"/Faliure:Success
+echo Audit policies have been set
+
+
 
