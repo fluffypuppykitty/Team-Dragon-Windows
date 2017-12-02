@@ -14,13 +14,14 @@ $extensions =@("aac","ac3","avi","aiff","bat","bmp","exe","flac","gif","jpeg","j
 $tools =@("Cain","nmap","keylogger","Armitage","Wireshark","Metasploit","netcat","PWdump7","Fgdump",
 "L0phtCrack","Ophcrack","PasswordsPro","Cain & Abel","Recover Keys","RockXP","Krbpwguess","LCP","LSASecretsView","TinyFTPD","Icmpsend","Advanced Keylogger","Spytech SpyAgent",
 "Perfect Keylogger","Powered Keylogger","Sprix Keylogger","KeyGhost","Keylogger Spy Monitor","REFOG Personal Monitor","Actual Keylogger","Activity Monitor,"SpyMe Tools","Easy Remote","
-"Alchemy Remote","Remote Exec","Execute This!","OsMonitor","Wiretap Pro","Spylab WebSpy","Active@Password Chang","Stellar Phoenix Password Recovery")
+"Alchemy Remote","Remote Exec","Execute This!","OsMonitor","Wiretap Pro","Spylab WebSpy","Active@Password Chang","Stellar Phoenix Password Recovery","Passware Password Recovery Kit","Password Unlocker Bundle","Offline NT Password & Registry Editor","Offline NT Password & Registry Editor",
+"ElcomSoft System Recovery","Trinity Rescue Kit","Teamviewer","PopPcap")
 
 
 
 
 
-Write-host "Checking $extensions"
+Write-host "Checking $extensionsPassware Password Recovery Kit
 foreach($ext in $extensions){
 	Write-host "Checking for .$ext files"
 	if(Test-path "$path\checkFilesOutput\$ext.txt"){Clear-content "$path\checkFilesOutput\$ext.txt"}
