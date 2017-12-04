@@ -26,6 +26,12 @@ If($Data1 -notcontains "Cain","nmap","keylogger","Armitage","Wireshark","Metaspl
 "Perfect Keylogger","Powered Keylogger","Sprix Keylogger","KeyGhost","Keylogger Spy Monitor","REFOG Personal Monitor","Actual Keylogger","Activity Monitor,"SpyMe Tools","Easy Remote","
 "Alchemy Remote","Remote Exec","Execute This!","OsMonitor","Wiretap Pro","Spylab WebSpy","Active@Password Chang","Stellar Phoenix Password Recovery","Passware Password Recovery Kit","Password Unlocker Bundle","Offline NT Password & Registry Editor","Offline NT Password & Registry Editor",
 "ElcomSoft System Recovery","Trinity Rescue Kit","Teamviewer","PopPcap") {
+'This system does not contain unwanted programs'
+if($Data1 -contains "Cain","nmap","keylogger","Armitage","Wireshark","Metasploit","netcat","PWdump7","Fgdump",
+"L0phtCrack","Ophcrack","PasswordsPro","Cain & Abel","Recover Keys","RockXP","Krbpwguess","LCP","LSASecretsView","TinyFTPD","Icmpsend","Advanced Keylogger","Spytech SpyAgent",
+"Perfect Keylogger","Powered Keylogger","Sprix Keylogger","KeyGhost","Keylogger Spy Monitor","REFOG Personal Monitor","Actual Keylogger","Activity Monitor,"SpyMe Tools","Easy Remote","
+"Alchemy Remote","Remote Exec","Execute This!","OsMonitor","Wiretap Pro","Spylab WebSpy","Active@Password Chang","Stellar Phoenix Password Recovery","Passware Password Recovery Kit","Password Unlocker Bundle","Offline NT Password & Registry Editor","Offline NT Password & Registry Editor",
+"ElcomSoft System Recovery","Trinity Rescue Kit","Teamviewer","PopPcap" {
 'This system contains unwanted programs'
 
 }
