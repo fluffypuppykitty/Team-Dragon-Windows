@@ -8,7 +8,7 @@ if(-NOT([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity
 $path2=Split-Path -parent $MyInvocation.MyCommand.Definition
 $path=Get-Content $path2\path.txt
 
-Write-host "Searching for unauthorized files..."
+echo "Searching for unauthorized files..."
 $extensions =@("aac","ac3","avi","aiff","bat","bmp","exe","flac","gif","jpeg","jpg","mov","m3u","m4p",
 "mp2","mp3","mp4","mpeg4","midi","msi","ogg","png","txt","sh","wav","wma","vqf","rainbowcrack","notavirus","payload","virus bat")
 $tools =@("Cain","nmap","keylogger","Armitage","Wireshark","Metasploit","netcat","PWdump7","Fgdump",
@@ -35,14 +35,14 @@ if($Data1 -contains "Cain","nmap","keylogger","Armitage","Wireshark","Metasploit
 'This system contains unwanted programs'
 
 }
-Write-host "Checking $extensionsPassware Password Recovery Kit
+echo "Checking $extensionsPassware Password Recovery Kit
 foreach($ext in $extensions){
 	Write-host "Checking for .$ext files"
 	if(Test-path "$path\checkFilesOutput\$ext.txt"){Clear-content "$path\checkFilesOutput\$ext.txt"}
 	C:\Windows\System32\cmd.exe /C dir C:\*.$ext /s /b | Out-File "$path\checkFilesOutput\$ext.txt"
 }
-Write-host "Finished searching by extension"
-Write-host "Checking for $tools"
+echo "Finished searching by extension"
+echo "Checking for $tools"
 foreach($tool in $tools){
 	Write-host "Checking for $tool"
 	if(Test-path $path\checkFilesOutput\$tool.txt){Clear-content "$path\checkFilesOutput\$tool.txt"}
