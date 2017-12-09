@@ -33,6 +33,11 @@ if($Data1 -contains "Cain","nmap","keylogger","Armitage","Wireshark","Metasploit
 "Alchemy Remote","Remote Exec","Execute This!","OsMonitor","Wiretap Pro","Spylab WebSpy","Active@Password Chang","Stellar Phoenix Password Recovery","Passware Password Recovery Kit","Password Unlocker Bundle","Offline NT Password & Registry Editor","Offline NT Password & Registry Editor",
 "ElcomSoft System Recovery","Trinity Rescue Kit","Teamviewer","PopPcap" {
 'This system contains unwanted programs'
+PS C:\> stop-service ("Cain","nmap","keylogger","Armitage","Wireshark","Metasploit","netcat","PWdump7","Fgdump",
+"L0phtCrack","Ophcrack","PasswordsPro","Cain & Abel","Recover Keys","RockXP","Krbpwguess","LCP","LSASecretsView","TinyFTPD","Icmpsend","Advanced Keylogger","Spytech SpyAgent",
+"Perfect Keylogger","Powered Keylogger","Sprix Keylogger","KeyGhost","Keylogger Spy Monitor","REFOG Personal Monitor","Actual Keylogger","Activity Monitor,"SpyMe Tools","Easy Remote","
+"Alchemy Remote","Remote Exec","Execute This!","OsMonitor","Wiretap Pro","Spylab WebSpy","Active@Password Chang","Stellar Phoenix Password Recovery","Passware Password Recovery Kit","Password Unlocker Bundle","Offline NT Password & Registry Editor","Offline NT Password & Registry Editor",
+"ElcomSoft System Recovery","Trinity Rescue Kit","Teamviewer","PopPcap")
 
 }
 Write-host "Checking $extensionsPassware Password Recovery Kit
@@ -75,7 +80,7 @@ auditpol /set /category:"Audit Privilege Use"/Faliure:Success
 auditpol /set /category:"Audit Process Tracking"/Faliure:Success
 auditpol /set /cateory:"Audit System Events"/Faliure:Success
 Write-host Audit policies have been set
-
+ 
 
 
 
