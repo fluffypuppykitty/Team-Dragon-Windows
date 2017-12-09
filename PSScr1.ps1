@@ -8,7 +8,7 @@ if(-NOT([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity
 $path2=Split-Path -parent $MyInvocation.MyCommand.Definition
 $path=Get-Content $path2\path.txt
 
-echo "Searching for unauthorized files..."
+Write-host "Searching for unauthorized files..."
 $extensions =@("aac","ac3","avi","aiff","bat","bmp","exe","flac","gif","jpeg","jpg","mov","m3u","m4p",
 "mp2","mp3","mp4","mpeg4","midi","msi","ogg","png","txt","sh","wav","wma","vqf","rainbowcrack","notavirus","payload","virus bat")
 $tools =@("Cain","nmap","keylogger","Armitage","Wireshark","Metasploit","netcat","PWdump7","Fgdump",
@@ -35,14 +35,14 @@ if($Data1 -contains "Cain","nmap","keylogger","Armitage","Wireshark","Metasploit
 'This system contains unwanted programs'
 
 }
-echo "Checking $extensionsPassware Password Recovery Kit
+Write-host "Checking $extensionsPassware Password Recovery Kit
 foreach($ext in $extensions){
 	Write-host "Checking for .$ext files"
 	if(Test-path "$path\checkFilesOutput\$ext.txt"){Clear-content "$path\checkFilesOutput\$ext.txt"}
 	C:\Windows\System32\cmd.exe /C dir C:\*.$ext /s /b | Out-File "$path\checkFilesOutput\$ext.txt"
 }
-echo "Finished searching by extension"
-echo "Checking for $tools"
+Write-host "Finished searching by extension"
+Write-host "Checking for $tools"
 foreach($tool in $tools){
 	Write-host "Checking for $tool"
 	if(Test-path $path\checkFilesOutput\$tool.txt){Clear-content "$path\checkFilesOutput\$tool.txt"}
@@ -51,19 +51,18 @@ foreach($tool in $tools){
 Write-host "Finished searching for tools"
 #Simple script for setting password policies in Windows.
 @echo off
-echo Setting up password policies
+Write-host Setting up password policies...
 net accounts /minpwlen:7 /maxpwage:30 /minpwage:10 /uniquepw:1 /forcelogoff:no /lockoutduration:30 /lockoutthreshold:7 
-echo Password Policies Set:
-echo Length: 7
-echo Max Age: 30 Days
-echo Min Age: 10 Days
-echo Times Password can be resused: 1
-echo Force Logoff: no
-echo Lockout Duration: 30 Minutes
-echo Lockout Threshold: 7
+Write-host Password Policies Set:
+Write-host Length: 7
+Write-host Max Age: 30 Days
+Write-host Min Age: 10 Days
+Write-host Force Logoff: no
+Write-host Lockout Duration: 30 Minutes
+Write-host Lockout Threshold: 7
 secedit.exe /export /cfg C:\secconfig.cfg
-echo Use this command to update edited file: secedit.exe /configure /db %windir%\securitynew.sdb /cfg C:\secconfig.cfg /areas SECURITYPOLICY
-echo Setting up auditing...
+Write-host Use this command to update edited file: secedit.exe /configure /db %windir%\securitynew.sdb /cfg C:\secconfig.cfg /areas SECURITYPOLICY
+Write-host Setting up auditing...
 auditpol /set /category:"Audit System Events"/Failure:Success
 auditpol /set /category:"Audit Process Tracking"/Faliure:Success
 auditpol /set /category:"Audit Account Logon Events"/Faliure:Success
@@ -75,7 +74,7 @@ auditpol /set /category:"Audit Policy Change"/Faliure:Successs
 auditpol /set /category:"Audit Privilege Use"/Faliure:Success
 auditpol /set /category:"Audit Process Tracking"/Faliure:Success
 auditpol /set /cateory:"Audit System Events"/Faliure:Success
-echo Audit policies have been set
+Write-host Audit policies have been set
 
 
 
