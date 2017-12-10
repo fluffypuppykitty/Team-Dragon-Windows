@@ -80,7 +80,7 @@ auditpol /set /category:"Audit Privilege Use"/Faliure:Success
 auditpol /set /category:"Audit Process Tracking"/Faliure:Success
 auditpol /set /cateory:"Audit System Events"/Faliure:Success
 Write-host Audit policies have been set
- 
+
 
 
 
